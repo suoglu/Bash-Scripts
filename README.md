@@ -9,3 +9,4 @@ Repository for my bash scripts
 | Script Name | Description |
 | ---------------- | ---------------- |
 | [updateAll.sh](Scripts/updateAll.sh) | Run apt update & upgrade and flatpak update |
+| [vivado.sh](Scripts/vivado.sh) | Set directory to vivado and start Vivado |
