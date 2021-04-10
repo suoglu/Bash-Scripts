@@ -8,5 +8,6 @@ Repository for my bash scripts
 
 | Script Name | Description |
 | ---------------- | ---------------- |
+| [verilog.sh](Scripts/verilog.sh) | Automates iverilog, first call iverilog than vvp |
 | [updateAll.sh](Scripts/updateAll.sh) | Run apt update & upgrade and flatpak update |
 | [vivado.sh](Scripts/vivado.sh) | Set directory to vivado and start Vivado |
