@@ -10,4 +10,7 @@ echo "apt upgrade done!"; echo
 echo "Running flatpak update:"
 flatpak update; wait
 echo "flatpak update done!"
+echo "Running flatpak uninstall --unused"
+flatpak uninstall --unused; wait
+echo "Unused flatpak removed!"
 
