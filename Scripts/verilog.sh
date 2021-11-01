@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script calls first checks for sources list, runs icarus verilog and vvp, removes .out and lunches GTKWave
+# This script calls first icarus verilog, then vvp and removes .out
 
 SIM_DIR=""
 SRC_DIC=""
@@ -74,14 +74,10 @@ if [ $# -eq 1 ] || [ $# -eq 2 ]; then
       if [ $? -ne 0 ]; then
         echo "Cannot remove o.out!"
       else
-        echo "o.out removed"
+        echo "Script...done"
       fi
-      echo "Running GTKWave"
-      gtkwave *.vcd
-      echo "Script done"
     fi
   fi
 else
 	echo "Usage: verilog.sh <testbench file> [<Source file list>]"
 fi
-
