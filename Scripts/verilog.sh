@@ -4,6 +4,7 @@
 SIM_DIR=""
 SRC_DIC=""
 SRC_FILE=""
+LIST_EXTEN=".txt"
 
 if [ $# -eq 2 ]; then
   SRC_FILE=$2
@@ -27,26 +28,26 @@ else
   elif [ -d "sources" ]; then
     SRC_DIC="sources/"
   fi
-  if [ -f "$SIM_DIR""sources.txt" ]; then
-    SRC_FILE="$SIM_DIR""sources.txt"
-  elif [ -f "$SIM_DIR""Sources.txt" ]; then
-    SRC_FILE="$SIM_DIR""Sources.txt"
-  elif [ -f "$SIM_DIR""src.txt" ]; then
-    SRC_FILE="$SIM_DIR""src.txt"
-  elif [ -f "$SIM_DIR""Src.txt" ]; then
-    SRC_FILE="$SIM_DIR""Src.txt"
-  elif [ -f "$SRC_DIC""sources.txt" ]; then
-    SRC_FILE="$SRC_DIC""sources.txt"
-  elif [ -f "$SRC_DIC""Sources.txt" ]; then
-    SRC_FILE="$SRC_DIC""Sources.txt"
-  elif [ -f "$SRC_DIC""src.txt" ]; then
-    SRC_FILE="$SRC_DIC""src.txt"
-  elif [ -f "$SRC_DIC""Src.txt" ]; then
-    SRC_FILE="$SRC_DIC""Src.txt"
+  if [ -f "$SIM_DIR""sources""$LIST_EXTEN" ]; then
+    SRC_FILE="$SIM_DIR""sources""$LIST_EXTEN"
+  elif [ -f "$SIM_DIR""Sources""$LIST_EXTEN" ]; then
+    SRC_FILE="$SIM_DIR""Sources""$LIST_EXTEN"
+  elif [ -f "$SIM_DIR""src""$LIST_EXTEN" ]; then
+    SRC_FILE="$SIM_DIR""src""$LIST_EXTEN"
+  elif [ -f "$SIM_DIR""Src""$LIST_EXTEN" ]; then
+    SRC_FILE="$SIM_DIR""Src""$LIST_EXTEN"
+  elif [ -f "$SRC_DIC""sources""$LIST_EXTEN" ]; then
+    SRC_FILE="$SRC_DIC""sources""$LIST_EXTEN"
+  elif [ -f "$SRC_DIC""Sources""$LIST_EXTEN" ]; then
+    SRC_FILE="$SRC_DIC""Sources""$LIST_EXTEN"
+  elif [ -f "$SRC_DIC""src""$LIST_EXTEN" ]; then
+    SRC_FILE="$SRC_DIC""src""$LIST_EXTEN"
+  elif [ -f "$SRC_DIC""Src""$LIST_EXTEN" ]; then
+    SRC_FILE="$SRC_DIC""Src""$LIST_EXTEN"
   fi
   
   if [ $SRC_FILE == "" ]; then
-    echo "Cannot find source files list under names sources.txt or src.txt!"
+    echo "Cannot find source files list under names sources""$LIST_EXTEN"" or src"$LIST_EXTEN"!"
     echo "Searched sim/ simulation/ src/ sources/ and ./"
     echo "Running without additional source files!"
   else
