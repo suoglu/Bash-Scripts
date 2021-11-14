@@ -6,7 +6,16 @@ SRC_DIC=""
 SRC_FILE=""
 LIST_EXTEN=".txt"
 
-if [ $# -eq 2 ]; then
+
+function printUsage(){
+  echo "Usage: verilog.sh <testbench file> [<Source file list>]"
+  exit 1
+}
+
+
+if [ $# -eq 0 ]; then
+  printUsage
+elif [ $# -eq 2 ]; then
   SRC_FILE=$2
   echo "Using given source files list $2"
 else
@@ -80,5 +89,5 @@ if [ $# -eq 1 ] || [ $# -eq 2 ]; then
     fi
   fi
 else
-	echo "Usage: verilog.sh <testbench file> [<Source file list>]"
+	printUsage
 fi
