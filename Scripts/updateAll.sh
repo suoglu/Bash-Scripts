@@ -9,8 +9,8 @@ sudo apt upgrade; wait
 echo "apt upgrade done!"; echo
 echo "Running flatpak update:"
 flatpak update; wait
-echo "flatpak update done!"
-echo "Running flatpak uninstall --unused"
+echo "flatpak update done!"; echo
+echo "Removing unused flatpak:"
 flatpak uninstall --unused; wait
 echo "Unused flatpak removed!"
 
